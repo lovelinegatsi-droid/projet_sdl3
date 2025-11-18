@@ -10,7 +10,7 @@ Le programme necessite de comprendre certaines base de la progrmmation avec sdl3
 #include <iostream> // comme toujours celle ci permet de gerer les fonctions d'entree sortie
 
 #### DECLARATION D'UNE STRUCTURE POUR MANIPULER LES POSITIONS ####
-struct blueSquare{
+struct redSquare{
     int x;   // ELLE gerera la position en abscisse 
     int y;    // gerera la position en ordonnee
 }; 
@@ -49,7 +49,7 @@ _la creation de la fenetre window se fait comme suit_
     bool quit = false;
 
 _// pour mettre le point_ 
-    SDL_FRect blueSquare {400, 300, 50, 50};
+    SDL_FRect redSquare {400, 300, 50, 50};
 
 _// le principe repose sur la position du point: pour le placer au centre, on divise la longueur et la largeur par deux , les autres representent la grosseur du point_
 
@@ -62,16 +62,16 @@ _// le principe repose sur la position du point: pour le placer au centre, on di
             } else if (e.type == SDL_EVENT_KEY_DOWN){
                 switch (e.key.scancode){
                     case SDL_SCANCODE_UP:
-                        blueSquare.y -= vitesse;
+                        redSquare.y -= vitesse;
                         break;
                     case SDL_SCANCODE_DOWN:
-                    blueSquare.y+=vitesse;
+                        redSquare.y+=vitesse;
                     break;
                     case SDL_SCANCODE_LEFT:
-                        blueSquare.x -= vitesse;
+                        redSquare.x -= vitesse;
                         break;
                     case SDL_SCANCODE_RIGHT:
-                        blueSquare.x += vitesse;
+                        redSquare.x += vitesse;
                         break;
                     case SDL_SCANCODE_ESCAPE:
                         quit = true;
@@ -84,7 +84,7 @@ _// le principe repose sur la position du point: pour le placer au centre, on di
         SDL_RenderClear(rendu); // pour effacer le renderer
 
         SDL_SetRenderDrawColor(rendu, 0, 255, 255, 0); // pour mettre le rendu en couleur bleu le principe va de (rendu, eclairage, couleur, couleur)
-        SDL_RenderFillRect(rendu, &blueSquare); // le rendu doit etre un carre
+        SDL_RenderFillRect(rendu, &redSquare); // le rendu doit etre un carre
         
         SDL_RenderPresent(rendu); // pour le presenter a l'ecran
     }
