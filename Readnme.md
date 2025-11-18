@@ -99,3 +99,5 @@ _Voici pour la compilation_
 
 _voici pour l'execution_
 ./nom de l'executable
+
+MERCI 😁😁😁😁 ET A LA PROCHAINE POUR UN NOUVEAU PROGRAMME 😉😉😉😉
